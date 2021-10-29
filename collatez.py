@@ -58,7 +58,7 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
             print(PATH)
             break
 
-def PATH_latex():
+def PATH_latex(NUM):
     latexPath = str()
     latex_start = '$'
     collatz_function_latex = "f(n)=\left\{\begin{array}{ll}\frac{n}{2}, & \hspace{} n \, mod \, 2 = 0 \\3n+1, & \hspace{} n \, mod \, 2 = 1\\\end{array} \right"
@@ -69,9 +69,9 @@ def PATH_latex():
     latex_start += "Path for " + collatz_function
 
     NUM_str = str(NUM)
-    latex_PATH += "\\" + "n = " + NUM_str
+    latexPath += "\\" + "n = " + NUM_str
     equation = "\\" + NUM_str + " / 2 \\"
-    PATH += equation
+    latexPath += equation
     
     while True:
         if NUM != 1:
@@ -79,17 +79,17 @@ def PATH_latex():
             if ifCondition == 0:
                 NUM = NUM/2
                 NUM_str = str(NUM)
-                PATH += "\n" + "n = " + NUM_str
+                latexPath += "\n" + "n = " + NUM_str
                 equation = "\n" + NUM_str + " / 2 \n"
-                PATH += equation
+                latexPath += equation
             else:
                 NUM = (3*NUM) + 1
                 NUM_str = str(NUM)
-                PATH += "\n" + "n = " + NUM_str
+                latexPath += "\n" + "n = " + NUM_str
                 equation = "(3 * " + NUM_str + ") + 1 \n"
-                PATH += equation
+                latexPath += equation
         else:
-            print(PATH)
+            print(latexPath)
             break
 
 
@@ -101,3 +101,5 @@ if __name__ == "__main__":
     collatz(NUM)
     t.sleep(sleepVar)
     collatzPath(NUM, PATH)
+    PATH_latex(NUM)
+    
