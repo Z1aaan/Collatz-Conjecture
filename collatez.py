@@ -32,7 +32,7 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
 
     NUM_str = str(NUM)
     collatz_function = "f(" + NUM_str + ")"
-    PATH += "Path for " + collatz_function
+    PATH += "Path for " + collatz_function + "\n"
 
     NUM_str = str(NUM)
     PATH += "\n" + "n = " + NUM_str
