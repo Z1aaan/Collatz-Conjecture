@@ -52,7 +52,7 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
                 NUM = (3*NUM) + 1
                 NUM_str = str(NUM)
                 PATH += "\n" + "n = " + NUM_str
-                equation = "( 3 * " + NUM_str + ") + 1 \n"
+                equation = "(3 * " + NUM_str + ") + 1 \n"
                 PATH += equation
         else:
             print(PATH)
