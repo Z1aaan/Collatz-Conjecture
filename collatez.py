@@ -1,6 +1,7 @@
 """
     Collatz's Conjecture
 """
+import time as t
 
 
 def collatz(NUM):
@@ -19,35 +20,51 @@ def collatz(NUM):
             break
 
 
-def collatzPath(NUM, PATH):  # export in LaTeX
+def collatzPath(NUM, PATH):  # creates the path for the user to view
+    # I want PATH to look like this:
+    """
+    Path for f(NUM):
+    n = ...
+    => ...
+    n = ...
+    ...
+    n = 1
+    """
+
     NUM_str = str(NUM)
     collatz_function = "f(" + NUM_str + ")"
-    PATH += "Path for" + collatz_function
+    PATH += "Path for " + collatz_function
     while True:
         if NUM != 1:
             ifCondition = NUM % 2
-            if ifCondition == 0:
-                pass
-
+            firstIf = 0
+            if ifCondition == 0 and firstIf == 0:
+                NUM_str = str(NUM)
+                PATH += "\n" + "n = " + NUM_str
+                equation = "\n" + NUM_str + " / 2 \n"
+                PATH += equation
+            elif ifCondition == 0 and firstIf != 0:
+                NUM = NUM/2
+                NUM_str = str(NUM)
+                PATH += "\n" + "n = " + NUM_str
+                equation = "\n" + NUM_str + " / 2 \n"
+                PATH += equation
             else:
-                pass
+                NUM = (3*NUM) + 1
+                NUM_str = str(NUM)
+                PATH += "\n" + "n = " + NUM_str
+                equation = "( 3 * " + NUM_str + ") + 1 \n"
+                PATH += equation
         else:
+            print(PATH)
             break
 
 
 if __name__ == "__main__":
     # create a variable to do the function on.
+    sleepVar = 1
     NUM = int(input("Number to do function on: "))
     PATH = str()
-    """
-    I want PATH to look like this:
-    Path for f(NUM):
-    n = ...
-    => ...
-    n = ... 
-    .   
-    .
-    .
-    n = 1    
-    """
     collatz(NUM)
+    t.sleep(sleepVar)
+    collatzPath(NUM, PATH)
