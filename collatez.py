@@ -59,15 +59,18 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
             break
 
 def PATH_latex():
+    latexPath = str()
+    latex_start = '$'
     collatz_function_latex = "f(n)=\left\{\begin{array}{ll}\frac{n}{2}, & \hspace{} n \, mod \, 2 = 0 \\3n+1, & \hspace{} n \, mod \, 2 = 1\\\end{array} \right"
-    
-    NUM_str = str(NUM)
-    collatz_function = "f(" + NUM_str + ")"
-    PATH += "Path for " + collatz_function
+    latexPath += latex_start + collatz_function_latex
 
     NUM_str = str(NUM)
-    PATH += "\n" + "n = " + NUM_str
-    equation = "\n" + NUM_str + " / 2 \n"
+    collatz_function = "f(" + NUM_str + ")"
+    latex_start += "Path for " + collatz_function
+
+    NUM_str = str(NUM)
+    latex_PATH += "\\" + "n = " + NUM_str
+    equation = "\\" + NUM_str + " / 2 \\"
     PATH += equation
     
     while True:
