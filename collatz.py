@@ -31,6 +31,7 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
     """
 
     NUM_str = str(NUM)
+    print(NUM_str)
     collatz_function = "f(" + NUM_str + ")"
     PATH += "Path for " + collatz_function + "\n"
 
@@ -38,13 +39,12 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
     if ifCondition == 0:
         NUM_str = str(NUM)
         PATH += "\n" + "n = " + NUM_str
-        equation = "\n" + NUM_str + " / 2 \n"
+        equation = "\n => " + NUM_str + " / 2 \n"
         PATH += equation
     else:
-        NUM = (3*NUM) + 1
         NUM_str = str(NUM)
         PATH += "\n" + "n = " + NUM_str
-        equation = "(3 * " + NUM_str + ") + 1 \n"
+        equation = "\n => (3 * " + NUM_str + ") + 1 \n"
         PATH += equation
 
     while True:
@@ -54,13 +54,13 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
                 NUM = NUM/2
                 NUM_str = str(NUM)
                 PATH += "\n" + "n = " + NUM_str
-                equation = "\n" + NUM_str + " / 2 \n"
+                equation = "\n => " + NUM_str + " / 2 \n"
                 PATH += equation
             else:
                 NUM = (3*NUM) + 1
                 NUM_str = str(NUM)
                 PATH += "\n" + "n = " + NUM_str
-                equation = "(3 * " + NUM_str + ") + 1 \n"
+                equation = "\n => (3 * " + NUM_str + ") + 1 \n"
                 PATH += equation
         else:
             print(PATH)
