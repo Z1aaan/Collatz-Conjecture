@@ -3,6 +3,8 @@
 """
 import time as t
 
+from collatzer_PATH_latex import *
+
 
 def collatz(NUM):
     while True:

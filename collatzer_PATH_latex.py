@@ -1,4 +1,4 @@
-from collatz import *
+from collatzer_main import *
 
 
 def collatz_latex(collatz_N):
