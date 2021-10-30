@@ -14,7 +14,7 @@
 ## **Requirements**
 #### - Python
 #### - LaTeX or TeX 
-#### -- Through LaTeX distributions like: MikTex, TeX Live etc. (I use [MikTex](https://miktex.org/))
+#### -- Through LaTeX distributions like: MikTex, TeX Live, etc. (I use [MikTex](https://miktex.org/))
 #### -- Or through online LaTeX editors like overleaf, [here](https://www.overleaf.com/).
 #### - Perl *(I think)* (I use [Strawberry Pearl](https://strawberryperl.com/)) 
 
