@@ -12,10 +12,10 @@
 #### If you want to export it as a LaTeX file, then input `Y`, when the program asks you if you want to export it. 
 
 ## **Requirements**
-#### - Python
+#### - [Python](https://www.python.org/)
 #### - LaTeX or TeX 
 #### -- Through LaTeX distributions like: MikTex, TeX Live, etc. (I use [MikTex](https://miktex.org/))
-#### -- Or through online LaTeX editors like overleaf, [here](https://www.overleaf.com/).
+#### -- Or through online LaTeX editors like [overleaf](https://www.overleaf.com/)
 #### - Perl *(I think)* (I use [Strawberry Pearl](https://strawberryperl.com/)) 
 
 ## Future
