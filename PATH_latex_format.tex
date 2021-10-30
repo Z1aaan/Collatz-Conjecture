@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\begin{document}
+
+%Title
+\section{Collatz Sequence for \(n=[INPUT]\) }
+
+%Collatz Function
+\[
+    f(n)=
+    \begin{cases}
+    \frac{n}{2}, & n \mod 2=0
+    \\
+    3n+1, &n \mod 2=1
+    \end{cases} \\
+\]
+
+% Path for given N
+\(
+    \textbf{Path for f([INPUT])}
+    \\[3mm]
+    f(n), n=[INPUT]
+    \\
+    \Rightarrow 3(n)+1
+    \\[1mm]
+    \vdots
+    \\[1mm]
+    f(n), n=1
+    \\
+    \Rightarrow \frac{n}{2}
+\)
+
+    
+\section{Credits and References Shit}
+%Maybe add link to gitrepo and other shit, idk
+
+\end{document}
