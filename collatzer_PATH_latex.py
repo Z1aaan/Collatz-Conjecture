@@ -29,11 +29,13 @@ def collatz_latex(collatz_N):
     # add the output of collatzer_main to the middle of the latex document
 
     # end to latex docuement
-    latex_path += """
+    latexEnd = """
     \\section{Credits and References Shit}
     %Maybe add link to gitrepo and other shit, idk
 
     \\end{document}"""
+
+    latex_path += latexBegin
     print(latex_path)
 
 
