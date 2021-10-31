@@ -5,6 +5,7 @@ import time as t
 def collatz_latex(collatzN):
     # remember to duplicate \ because python needs two \ to print it
     latex_path = str()
+    collatzN_str = str(collatzN)
 
     # start the latex docuement
 
@@ -16,8 +17,8 @@ def collatz_latex(collatzN):
     \\usepackage{amsmath}
     \\begin{document}"""
 
-    latexBegin_input = "%Title \\section{Collatz Sequence for \(n=" + \
-        collatzN + "\) }"
+    latexBegin_input = "\n %Title \n \\section{Collatz Sequence for \(n=" + \
+        collatzN_str + "\) }"
 
     latexBegin_2 = latexBegin_input
 
