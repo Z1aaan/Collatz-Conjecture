@@ -127,7 +127,12 @@ def collatz_latex(collatzN):
     latexEnd = """
     \\section{Credits and References Shit}
     %Maybe add link to gitrepo and other shit, idk
-
+    This is created using Collatzer (https://github.com/Z1aaan/Collatzer).
+    Created By: Z1aaan
+    
+    README:
+    A program created to visualize and simulate a user-given value for \\textit{N} 
+    and see what happens when it is put under the Collatz function.
     \\end{document}"""
 
     latex_path += latexEnd
