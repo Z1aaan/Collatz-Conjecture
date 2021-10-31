@@ -1,11 +1,14 @@
 from collatzer_main import *
 import time as t
+import math
 
 
 def collatz_latex(collatzN):
     # remember to duplicate \ because python needs two \ to print it
     latex_path = str()
     collatzN_str = str(collatzN)
+    collatzN_prev = int()
+    collatzN_str_prev = str()
 
     # start the latex docuement
 
@@ -47,35 +50,77 @@ def collatz_latex(collatzN):
 
     # LATEX
 
+    # odd
     # f(n), n=[INPUT]
     # \\
     # \Rightarrow 3(n)+1
     # \\[1mm]
-    # \vdots
-    # \\[1mm]
+
+    # even
     # f(n), n=1
     # \\
     # \Rightarrow \frac{n}{2}
-    # \)
 
-    # \)
+    CollatzMain = int()
+    CollatzMainPrev = int()
+    STRCollatzMain = str()
+    STRCollatzMainPrev = str()
 
-    # PYTHON
+    ifCond = collatzN % 2
+    if ifCond == 0:
+        CollatzMainPrev = collatzN
+        STRCollatzMainPrev = str(CollatzMainPrev)
+        CollatzMain = CollatzMainPrev / 2
+        CollatzMain = math.trunc(CollatzMain)
+        STRCollatzMain = str(CollatzMain)
+        eq_collatzEquation = "f(n), n=" + STRCollatzMainPrev + \
+            "\n \\\\ \n \\Rightarrow \\frac{" + \
+            STRCollatzMainPrev + \
+            "}{2} " + "\n \\\\ \n \\Rightarrow n=" + \
+            STRCollatzMain + "\n \\\\[1mm]"
+        latex_path += eq_collatzEquation
+    else:
+        CollatzMainPrev = collatzN
+        STRCollatzMainPrev = str(CollatzMainPrev)
+        CollatzMain = (3 * CollatzMainPrev) + 1
+        CollatzMain = math.trunc(CollatzMain)
+        STRCollatzMain = str(CollatzMain)
+        eq_collatzEquation = "f(n), n=" + STRCollatzMainPrev + \
+            "\n \\\\ \n \\Rightarrow 3(" + STRCollatzMainPrev + ") + 1" + \
+            "\n \\\\ \n \\Rightarrow n=" + STRCollatzMain + "\n \\\\[1mm]"
+        latex_path += eq_collatzEquation
 
-    # collatz_function="f(" + NUM_str + ")"
-    # PATH += "Path for " + collatz_function + "\n"
-
-    # ifCondition=NUM % 2
-    # if ifCondition == 0:
-    #     NUM_str=str(NUM)
-    #     PATH += "\n" + "n = " + NUM_str
-    #     equation="\n => " + NUM_str + " / 2 \n"
-    #     PATH += equation
-    # else:
-    #     NUM_str=str(NUM)
-    #     PATH += "\n" + "n = " + NUM_str
-    #     equation="\n => (3 * " + NUM_str + ") + 1 \n"
-    #     PATH += equation
+    while True:
+        if CollatzMain != 1:
+            ifCond = CollatzMain % 2
+            if ifCond == 0:
+                CollatzMainPrev = CollatzMain
+                STRCollatzMainPrev = str(CollatzMainPrev)
+                CollatzMain = CollatzMainPrev / 2
+                CollatzMain = math.trunc(CollatzMain)
+                STRCollatzMain = str(CollatzMain)
+                eq_collatzEquation = "f(n), n=" + STRCollatzMainPrev + \
+                    "\n \\\\ \n \\Rightarrow \\frac{" + \
+                    STRCollatzMainPrev + \
+                    "}{2} " + "\n \\\\ \n \\Rightarrow n=" + \
+                    STRCollatzMain + "\n \\\\[1mm]"
+                latex_path += eq_collatzEquation
+            else:
+                CollatzMainPrev = CollatzMain
+                STRCollatzMainPrev = str(CollatzMainPrev)
+                CollatzMain = (3 * CollatzMainPrev) + 1
+                CollatzMain = math.trunc(CollatzMain)
+                STRCollatzMain = str(CollatzMain)
+                eq_collatzEquation = "f(n), n=" + STRCollatzMainPrev + \
+                    "\n \\\\ \n \\Rightarrow 3(" + STRCollatzMainPrev + ") + 1" + \
+                    "\n \\\\ \n \\Rightarrow n=" + \
+                    STRCollatzMain + "\n \\\\[1mm]"
+                latex_path += eq_collatzEquation
+            # print(CollatzMain, CollatzMainPrev)
+            # print(latex_path)
+            # input()
+        else:
+            break
 
     # end to latex docuement
     latexEnd = """
@@ -93,6 +138,6 @@ if __name__ == "__main__":
     print("""Put messages here later""")
     for i in range(10):
         # add this so that there's like a 'loading sequence' before the latex output is displayed
-        t.sleep(0.25)
+        t.sleep(0.1)
         print()
-    collatz_latex(3)
+    collatz_latex(4)

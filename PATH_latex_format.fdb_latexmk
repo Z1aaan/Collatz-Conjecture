@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 0 "PATH_latex_format.xdv" "PATH_latex_format.pdf" "PATH_latex_format" 0
-  "PATH_latex_format.xdv" 0 -1 0 "xelatex"
+["xdvipdfmx"] 1635692992 "PATH_latex_format.xdv" "PATH_latex_format.pdf" "PATH_latex_format" 1635692994
+  "PATH_latex_format.xdv" 1635692992 2464 d4b8e0f7c63ca7bf4586ecc76d35134e "xelatex"
   (generated)
   "PATH_latex_format.pdf"
-["xelatex"] 1635692838 "c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex" "PATH_latex_format.xdv" "PATH_latex_format" 1635692838
+["xelatex"] 1635692989 "c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex" "PATH_latex_format.xdv" "PATH_latex_format" 1635692994
   "C:/Users/zhean/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1635511583 23130830 768fe167685f395cf19007bf5ff6afc3 ""
   "C:/Users/zhean/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/zhean/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -20,9 +20,9 @@
   "C:/Users/zhean/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1623741700 8448 05e1c6a8fc5db344ed9d7aeb299acbce ""
   "C:/Users/zhean/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd" 1623741700 2430 06a89bcded389391906798ea7a3f3aaa ""
   "C:/Users/zhean/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-xetex.def" 1628077986 35094 dff38fe5f83dcf58524cf8dd1213adbb ""
-  "PATH_latex_format.aux" 1635692838 34 3985256e7290058c681f74d7a3565a19 "xelatex"
-  "PATH_latex_format.tex" 1635692831 628 eb4f56d6033cd98ffedadb376da3eaca ""
-  "c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex" 1635692831 628 eb4f56d6033cd98ffedadb376da3eaca ""
+  "PATH_latex_format.aux" 1635692992 270 99faa240d8a2b17835ea5fd9aeeab079 "xelatex"
+  "PATH_latex_format.tex" 1635692987 631 2999020a81e52ac484e361a5a4688893 ""
+  "c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex" 1635692987 631 2999020a81e52ac484e361a5a4688893 ""
   (generated)
   "PATH_latex_format.aux"
   "PATH_latex_format.xdv"

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.29)  31 OCT 2021 23:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.10.29)  31 OCT 2021 23:09
 entering extended mode
 **c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex
 (c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex
@@ -115,43 +115,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
-
-c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex:23: Missing $ inserted.
-<inserted text> 
-                $
-l.23 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex:23: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.23 
-     
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex:26: Missing $ inserted.
-<inserted text> 
-                $
-l.26     \Rightarrow
-                     3(n)+1
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex:33: Missing $ inserted.
-<inserted text> 
-                $
-l.33 \]
-       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[1
+ [1
 
 ] (PATH_latex_format.aux) ) 
 Here is how much of TeX's memory you used:
@@ -161,6 +125,6 @@ Here is how much of TeX's memory you used:
  21600 multiletter control sequences out of 15000+600000
  405085 words of font info for 41 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 56i,7n,66p,286b,124s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,7n,66p,286b,121s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on PATH_latex_format.xdv (1 page, 2576 bytes).
+Output written on PATH_latex_format.xdv (1 page, 2464 bytes).
