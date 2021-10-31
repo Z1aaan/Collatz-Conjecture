@@ -45,17 +45,22 @@ def collatz_latex(collatzN):
 
     latex_path += latexMainStart_1 + latexMainStart_2 + latexMainStart_3
 
-    # f(n), n = [INPUT]
+    # LATEX
+
+    # f(n), n=[INPUT]
     # \\
     # \Rightarrow 3(n)+1
     # \\[1mm]
     # \vdots
     # \\[1mm]
-    # f(n), n = 1
+    # f(n), n=1
     # \\
     # \Rightarrow \frac{n}{2}
+    # \)
 
     # \)
+
+    # PYTHON
 
     # collatz_function="f(" + NUM_str + ")"
     # PATH += "Path for " + collatz_function + "\n"
