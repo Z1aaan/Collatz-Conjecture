@@ -138,11 +138,12 @@ if __name__ == "__main__":
     choice = str(input("""
     Converting the equation in LaTeX, 
     may take a long time (depending on how long the equation is),
-    are you sure? [Y/n]"""))
+    are you sure? [Y/n]
+    < """))
     choice = choice.upper()
     if choice == 'Y':
         print("""
-        PATH_latex: Working...
+        \nPATH_latex: Working...
         Converting to LaTeX... 
         Hold On....""")
         for i in range(10):
@@ -151,4 +152,4 @@ if __name__ == "__main__":
             print()
         collatz_latex(5)
     else:
-        print("PATH_latex: leaving...")
+        print("\nPATH_latex: leaving...")
