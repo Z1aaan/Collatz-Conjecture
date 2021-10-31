@@ -77,7 +77,7 @@ def collatz_latex(collatzN):
             "\n \\\\ \n \\Rightarrow \\frac{" + \
             STRCollatzMainPrev + \
             "}{2} " + "\n \\\\ \n \\Rightarrow n=" + \
-            STRCollatzMain + "\n \\\\[1mm]"
+            STRCollatzMain + "\n \\\\[3mm] \n"
         latex_path += eq_collatzEquation
     else:
         CollatzMainPrev = collatzN
@@ -87,7 +87,7 @@ def collatz_latex(collatzN):
         STRCollatzMain = str(CollatzMain)
         eq_collatzEquation = "f(n), n=" + STRCollatzMainPrev + \
             "\n \\\\ \n \\Rightarrow 3(" + STRCollatzMainPrev + ") + 1" + \
-            "\n \\\\ \n \\Rightarrow n=" + STRCollatzMain + "\n \\\\[1mm]"
+            "\n \\\\ \n \\Rightarrow n=" + STRCollatzMain + "\n \\\\[3mm] \n"
         latex_path += eq_collatzEquation
 
     while True:
@@ -103,7 +103,7 @@ def collatz_latex(collatzN):
                     "\n \\\\ \n \\Rightarrow \\frac{" + \
                     STRCollatzMainPrev + \
                     "}{2} " + "\n \\\\ \n \\Rightarrow n=" + \
-                    STRCollatzMain + "\n \\\\[1mm]"
+                    STRCollatzMain + "\n \\\\[3mm] \n"
                 latex_path += eq_collatzEquation
             else:
                 CollatzMainPrev = CollatzMain
@@ -114,7 +114,7 @@ def collatz_latex(collatzN):
                 eq_collatzEquation = "f(n), n=" + STRCollatzMainPrev + \
                     "\n \\\\ \n \\Rightarrow 3(" + STRCollatzMainPrev + ") + 1" + \
                     "\n \\\\ \n \\Rightarrow n=" + \
-                    STRCollatzMain + "\n \\\\[1mm]"
+                    STRCollatzMain + "\n \\\\[3mm] \n"
                 latex_path += eq_collatzEquation
             # print(CollatzMain, CollatzMainPrev)
             # print(latex_path)
@@ -140,4 +140,4 @@ if __name__ == "__main__":
         # add this so that there's like a 'loading sequence' before the latex output is displayed
         t.sleep(0.1)
         print()
-    collatz_latex(4)
+    collatz_latex(5)
