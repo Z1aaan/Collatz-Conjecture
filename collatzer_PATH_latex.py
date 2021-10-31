@@ -36,6 +36,41 @@ def collatz_latex(collatzN):
     latex_path += latexBegin_1 + latexBegin_2 + latexBegin_3
 
     # add the output of collatzer_main to the middle of the latex document
+    latexMainStart_1 = """
+    % Path for given N
+    \\("""
+    latexMainStart_2 = "\\textbf{Path for f(" + collatzN_str + ")}"
+
+    latexMainStart_3 = "\\\\[3mm]"
+
+    latex_path += latexMainStart_1 + latexMainStart_2 + latexMainStart_3
+
+    # f(n), n = [INPUT]
+    # \\
+    # \Rightarrow 3(n)+1
+    # \\[1mm]
+    # \vdots
+    # \\[1mm]
+    # f(n), n = 1
+    # \\
+    # \Rightarrow \frac{n}{2}
+
+    # \)
+
+    # collatz_function="f(" + NUM_str + ")"
+    # PATH += "Path for " + collatz_function + "\n"
+
+    # ifCondition=NUM % 2
+    # if ifCondition == 0:
+    #     NUM_str=str(NUM)
+    #     PATH += "\n" + "n = " + NUM_str
+    #     equation="\n => " + NUM_str + " / 2 \n"
+    #     PATH += equation
+    # else:
+    #     NUM_str=str(NUM)
+    #     PATH += "\n" + "n = " + NUM_str
+    #     equation="\n => (3 * " + NUM_str + ") + 1 \n"
+    #     PATH += equation
 
     # end to latex docuement
     latexEnd = """
