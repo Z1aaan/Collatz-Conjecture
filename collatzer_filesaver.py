@@ -19,8 +19,8 @@ File Name?
     with open(fullFileName, "w") as f:
         f.write(fileContent)
 
-    for i in range(15):
-        t.sleep(0.7)
+    for i in range(10):
+        t.sleep(0.35)
         print("\nLoading...\n")
     print("Done!")
     input("Press ANY KEY to leave...")

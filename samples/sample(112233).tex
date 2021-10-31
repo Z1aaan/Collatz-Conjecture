@@ -1,0 +1,951 @@
+
+    \documentclass{article}
+    \usepackage[utf8]{inputenc}
+    \usepackage{amsmath}
+    \begin{document}
+ %Title 
+ \section{Collatz Sequence for \(n=112233\) }
+    %Collatz Function
+    \[
+        f(n)=
+        \begin{cases}
+        \frac{n}{2}, & n \mod 2=0
+        \\
+        3n+1, &n \mod 2=1
+        \end{cases} \\
+    \]
+    % Path for given N
+    \(\textbf{Path for f(112233)}\\[3mm]f(n), n=112233
+ \\ 
+ \Rightarrow 3(112233) + 1
+ \\ 
+ \Rightarrow n=336700
+ \\[3mm] 
+f(n), n=336700
+ \\ 
+ \Rightarrow \frac{336700}{2} 
+ \\ 
+ \Rightarrow n=168350
+ \\[3mm] 
+f(n), n=168350
+ \\ 
+ \Rightarrow \frac{168350}{2} 
+ \\ 
+ \Rightarrow n=84175
+ \\[3mm] 
+f(n), n=84175
+ \\ 
+ \Rightarrow 3(84175) + 1
+ \\ 
+ \Rightarrow n=252526
+ \\[3mm] 
+f(n), n=252526
+ \\ 
+ \Rightarrow \frac{252526}{2} 
+ \\ 
+ \Rightarrow n=126263
+ \\[3mm] 
+f(n), n=126263
+ \\ 
+ \Rightarrow 3(126263) + 1
+ \\ 
+ \Rightarrow n=378790
+ \\[3mm] 
+f(n), n=378790
+ \\ 
+ \Rightarrow \frac{378790}{2} 
+ \\ 
+ \Rightarrow n=189395
+ \\[3mm] 
+f(n), n=189395
+ \\ 
+ \Rightarrow 3(189395) + 1
+ \\ 
+ \Rightarrow n=568186
+ \\[3mm] 
+f(n), n=568186
+ \\ 
+ \Rightarrow \frac{568186}{2} 
+ \\ 
+ \Rightarrow n=284093
+ \\[3mm] 
+f(n), n=284093
+ \\ 
+ \Rightarrow 3(284093) + 1
+ \\ 
+ \Rightarrow n=852280
+ \\[3mm] 
+f(n), n=852280
+ \\ 
+ \Rightarrow \frac{852280}{2} 
+ \\ 
+ \Rightarrow n=426140
+ \\[3mm] 
+f(n), n=426140
+ \\ 
+ \Rightarrow \frac{426140}{2} 
+ \\ 
+ \Rightarrow n=213070
+ \\[3mm] 
+f(n), n=213070
+ \\ 
+ \Rightarrow \frac{213070}{2} 
+ \\ 
+ \Rightarrow n=106535
+ \\[3mm] 
+f(n), n=106535
+ \\ 
+ \Rightarrow 3(106535) + 1
+ \\ 
+ \Rightarrow n=319606
+ \\[3mm] 
+f(n), n=319606
+ \\ 
+ \Rightarrow \frac{319606}{2} 
+ \\ 
+ \Rightarrow n=159803
+ \\[3mm] 
+f(n), n=159803
+ \\ 
+ \Rightarrow 3(159803) + 1
+ \\ 
+ \Rightarrow n=479410
+ \\[3mm] 
+f(n), n=479410
+ \\ 
+ \Rightarrow \frac{479410}{2} 
+ \\ 
+ \Rightarrow n=239705
+ \\[3mm] 
+f(n), n=239705
+ \\ 
+ \Rightarrow 3(239705) + 1
+ \\ 
+ \Rightarrow n=719116
+ \\[3mm] 
+f(n), n=719116
+ \\ 
+ \Rightarrow \frac{719116}{2} 
+ \\ 
+ \Rightarrow n=359558
+ \\[3mm] 
+f(n), n=359558
+ \\ 
+ \Rightarrow \frac{359558}{2} 
+ \\ 
+ \Rightarrow n=179779
+ \\[3mm] 
+f(n), n=179779
+ \\ 
+ \Rightarrow 3(179779) + 1
+ \\ 
+ \Rightarrow n=539338
+ \\[3mm] 
+f(n), n=539338
+ \\ 
+ \Rightarrow \frac{539338}{2} 
+ \\ 
+ \Rightarrow n=269669
+ \\[3mm] 
+f(n), n=269669
+ \\ 
+ \Rightarrow 3(269669) + 1
+ \\ 
+ \Rightarrow n=809008
+ \\[3mm] 
+f(n), n=809008
+ \\ 
+ \Rightarrow \frac{809008}{2} 
+ \\ 
+ \Rightarrow n=404504
+ \\[3mm] 
+f(n), n=404504
+ \\ 
+ \Rightarrow \frac{404504}{2} 
+ \\ 
+ \Rightarrow n=202252
+ \\[3mm] 
+f(n), n=202252
+ \\ 
+ \Rightarrow \frac{202252}{2} 
+ \\ 
+ \Rightarrow n=101126
+ \\[3mm] 
+f(n), n=101126
+ \\ 
+ \Rightarrow \frac{101126}{2} 
+ \\ 
+ \Rightarrow n=50563
+ \\[3mm] 
+f(n), n=50563
+ \\ 
+ \Rightarrow 3(50563) + 1
+ \\ 
+ \Rightarrow n=151690
+ \\[3mm] 
+f(n), n=151690
+ \\ 
+ \Rightarrow \frac{151690}{2} 
+ \\ 
+ \Rightarrow n=75845
+ \\[3mm] 
+f(n), n=75845
+ \\ 
+ \Rightarrow 3(75845) + 1
+ \\ 
+ \Rightarrow n=227536
+ \\[3mm] 
+f(n), n=227536
+ \\ 
+ \Rightarrow \frac{227536}{2} 
+ \\ 
+ \Rightarrow n=113768
+ \\[3mm] 
+f(n), n=113768
+ \\ 
+ \Rightarrow \frac{113768}{2} 
+ \\ 
+ \Rightarrow n=56884
+ \\[3mm] 
+f(n), n=56884
+ \\ 
+ \Rightarrow \frac{56884}{2} 
+ \\ 
+ \Rightarrow n=28442
+ \\[3mm] 
+f(n), n=28442
+ \\ 
+ \Rightarrow \frac{28442}{2} 
+ \\ 
+ \Rightarrow n=14221
+ \\[3mm] 
+f(n), n=14221
+ \\ 
+ \Rightarrow 3(14221) + 1
+ \\ 
+ \Rightarrow n=42664
+ \\[3mm] 
+f(n), n=42664
+ \\ 
+ \Rightarrow \frac{42664}{2} 
+ \\ 
+ \Rightarrow n=21332
+ \\[3mm] 
+f(n), n=21332
+ \\ 
+ \Rightarrow \frac{21332}{2} 
+ \\ 
+ \Rightarrow n=10666
+ \\[3mm] 
+f(n), n=10666
+ \\ 
+ \Rightarrow \frac{10666}{2} 
+ \\ 
+ \Rightarrow n=5333
+ \\[3mm] 
+f(n), n=5333
+ \\ 
+ \Rightarrow 3(5333) + 1
+ \\ 
+ \Rightarrow n=16000
+ \\[3mm] 
+f(n), n=16000
+ \\ 
+ \Rightarrow \frac{16000}{2} 
+ \\ 
+ \Rightarrow n=8000
+ \\[3mm] 
+f(n), n=8000
+ \\ 
+ \Rightarrow \frac{8000}{2} 
+ \\ 
+ \Rightarrow n=4000
+ \\[3mm] 
+f(n), n=4000
+ \\ 
+ \Rightarrow \frac{4000}{2} 
+ \\ 
+ \Rightarrow n=2000
+ \\[3mm] 
+f(n), n=2000
+ \\ 
+ \Rightarrow \frac{2000}{2} 
+ \\ 
+ \Rightarrow n=1000
+ \\[3mm] 
+f(n), n=1000
+ \\ 
+ \Rightarrow \frac{1000}{2} 
+ \\ 
+ \Rightarrow n=500
+ \\[3mm] 
+f(n), n=500
+ \\ 
+ \Rightarrow \frac{500}{2} 
+ \\ 
+ \Rightarrow n=250
+ \\[3mm] 
+f(n), n=250
+ \\ 
+ \Rightarrow \frac{250}{2} 
+ \\ 
+ \Rightarrow n=125
+ \\[3mm] 
+f(n), n=125
+ \\ 
+ \Rightarrow 3(125) + 1
+ \\ 
+ \Rightarrow n=376
+ \\[3mm] 
+f(n), n=376
+ \\ 
+ \Rightarrow \frac{376}{2} 
+ \\ 
+ \Rightarrow n=188
+ \\[3mm] 
+f(n), n=188
+ \\ 
+ \Rightarrow \frac{188}{2} 
+ \\ 
+ \Rightarrow n=94
+ \\[3mm] 
+f(n), n=94
+ \\ 
+ \Rightarrow \frac{94}{2} 
+ \\ 
+ \Rightarrow n=47
+ \\[3mm] 
+f(n), n=47
+ \\ 
+ \Rightarrow 3(47) + 1
+ \\ 
+ \Rightarrow n=142
+ \\[3mm] 
+f(n), n=142
+ \\ 
+ \Rightarrow \frac{142}{2} 
+ \\ 
+ \Rightarrow n=71
+ \\[3mm] 
+f(n), n=71
+ \\ 
+ \Rightarrow 3(71) + 1
+ \\ 
+ \Rightarrow n=214
+ \\[3mm] 
+f(n), n=214
+ \\ 
+ \Rightarrow \frac{214}{2} 
+ \\ 
+ \Rightarrow n=107
+ \\[3mm] 
+f(n), n=107
+ \\ 
+ \Rightarrow 3(107) + 1
+ \\ 
+ \Rightarrow n=322
+ \\[3mm] 
+f(n), n=322
+ \\ 
+ \Rightarrow \frac{322}{2} 
+ \\ 
+ \Rightarrow n=161
+ \\[3mm] 
+f(n), n=161
+ \\ 
+ \Rightarrow 3(161) + 1
+ \\ 
+ \Rightarrow n=484
+ \\[3mm] 
+f(n), n=484
+ \\ 
+ \Rightarrow \frac{484}{2} 
+ \\ 
+ \Rightarrow n=242
+ \\[3mm] 
+f(n), n=242
+ \\ 
+ \Rightarrow \frac{242}{2} 
+ \\ 
+ \Rightarrow n=121
+ \\[3mm] 
+f(n), n=121
+ \\ 
+ \Rightarrow 3(121) + 1
+ \\ 
+ \Rightarrow n=364
+ \\[3mm] 
+f(n), n=364
+ \\ 
+ \Rightarrow \frac{364}{2} 
+ \\ 
+ \Rightarrow n=182
+ \\[3mm] 
+f(n), n=182
+ \\ 
+ \Rightarrow \frac{182}{2} 
+ \\ 
+ \Rightarrow n=91
+ \\[3mm] 
+f(n), n=91
+ \\ 
+ \Rightarrow 3(91) + 1
+ \\ 
+ \Rightarrow n=274
+ \\[3mm] 
+f(n), n=274
+ \\ 
+ \Rightarrow \frac{274}{2} 
+ \\ 
+ \Rightarrow n=137
+ \\[3mm] 
+f(n), n=137
+ \\ 
+ \Rightarrow 3(137) + 1
+ \\ 
+ \Rightarrow n=412
+ \\[3mm] 
+f(n), n=412
+ \\ 
+ \Rightarrow \frac{412}{2} 
+ \\ 
+ \Rightarrow n=206
+ \\[3mm] 
+f(n), n=206
+ \\ 
+ \Rightarrow \frac{206}{2} 
+ \\ 
+ \Rightarrow n=103
+ \\[3mm] 
+f(n), n=103
+ \\ 
+ \Rightarrow 3(103) + 1
+ \\ 
+ \Rightarrow n=310
+ \\[3mm] 
+f(n), n=310
+ \\ 
+ \Rightarrow \frac{310}{2} 
+ \\ 
+ \Rightarrow n=155
+ \\[3mm] 
+f(n), n=155
+ \\ 
+ \Rightarrow 3(155) + 1
+ \\ 
+ \Rightarrow n=466
+ \\[3mm] 
+f(n), n=466
+ \\ 
+ \Rightarrow \frac{466}{2} 
+ \\ 
+ \Rightarrow n=233
+ \\[3mm] 
+f(n), n=233
+ \\ 
+ \Rightarrow 3(233) + 1
+ \\ 
+ \Rightarrow n=700
+ \\[3mm] 
+f(n), n=700
+ \\ 
+ \Rightarrow \frac{700}{2} 
+ \\ 
+ \Rightarrow n=350
+ \\[3mm] 
+f(n), n=350
+ \\ 
+ \Rightarrow \frac{350}{2} 
+ \\ 
+ \Rightarrow n=175
+ \\[3mm] 
+f(n), n=175
+ \\ 
+ \Rightarrow 3(175) + 1
+ \\ 
+ \Rightarrow n=526
+ \\[3mm] 
+f(n), n=526
+ \\ 
+ \Rightarrow \frac{526}{2} 
+ \\ 
+ \Rightarrow n=263
+ \\[3mm] 
+f(n), n=263
+ \\ 
+ \Rightarrow 3(263) + 1
+ \\ 
+ \Rightarrow n=790
+ \\[3mm] 
+f(n), n=790
+ \\ 
+ \Rightarrow \frac{790}{2} 
+ \\ 
+ \Rightarrow n=395
+ \\[3mm] 
+f(n), n=395
+ \\ 
+ \Rightarrow 3(395) + 1
+ \\ 
+ \Rightarrow n=1186
+ \\[3mm] 
+f(n), n=1186
+ \\ 
+ \Rightarrow \frac{1186}{2} 
+ \\ 
+ \Rightarrow n=593
+ \\[3mm] 
+f(n), n=593
+ \\ 
+ \Rightarrow 3(593) + 1
+ \\ 
+ \Rightarrow n=1780
+ \\[3mm] 
+f(n), n=1780
+ \\ 
+ \Rightarrow \frac{1780}{2} 
+ \\ 
+ \Rightarrow n=890
+ \\[3mm] 
+f(n), n=890
+ \\ 
+ \Rightarrow \frac{890}{2} 
+ \\ 
+ \Rightarrow n=445
+ \\[3mm] 
+f(n), n=445
+ \\ 
+ \Rightarrow 3(445) + 1
+ \\ 
+ \Rightarrow n=1336
+ \\[3mm] 
+f(n), n=1336
+ \\ 
+ \Rightarrow \frac{1336}{2} 
+ \\ 
+ \Rightarrow n=668
+ \\[3mm] 
+f(n), n=668
+ \\ 
+ \Rightarrow \frac{668}{2} 
+ \\ 
+ \Rightarrow n=334
+ \\[3mm] 
+f(n), n=334
+ \\ 
+ \Rightarrow \frac{334}{2} 
+ \\ 
+ \Rightarrow n=167
+ \\[3mm] 
+f(n), n=167
+ \\ 
+ \Rightarrow 3(167) + 1
+ \\ 
+ \Rightarrow n=502
+ \\[3mm] 
+f(n), n=502
+ \\ 
+ \Rightarrow \frac{502}{2} 
+ \\ 
+ \Rightarrow n=251
+ \\[3mm] 
+f(n), n=251
+ \\ 
+ \Rightarrow 3(251) + 1
+ \\ 
+ \Rightarrow n=754
+ \\[3mm] 
+f(n), n=754
+ \\ 
+ \Rightarrow \frac{754}{2} 
+ \\ 
+ \Rightarrow n=377
+ \\[3mm] 
+f(n), n=377
+ \\ 
+ \Rightarrow 3(377) + 1
+ \\ 
+ \Rightarrow n=1132
+ \\[3mm] 
+f(n), n=1132
+ \\ 
+ \Rightarrow \frac{1132}{2} 
+ \\ 
+ \Rightarrow n=566
+ \\[3mm] 
+f(n), n=566
+ \\ 
+ \Rightarrow \frac{566}{2} 
+ \\ 
+ \Rightarrow n=283
+ \\[3mm] 
+f(n), n=283
+ \\ 
+ \Rightarrow 3(283) + 1
+ \\ 
+ \Rightarrow n=850
+ \\[3mm] 
+f(n), n=850
+ \\ 
+ \Rightarrow \frac{850}{2} 
+ \\ 
+ \Rightarrow n=425
+ \\[3mm] 
+f(n), n=425
+ \\ 
+ \Rightarrow 3(425) + 1
+ \\ 
+ \Rightarrow n=1276
+ \\[3mm] 
+f(n), n=1276
+ \\ 
+ \Rightarrow \frac{1276}{2} 
+ \\ 
+ \Rightarrow n=638
+ \\[3mm] 
+f(n), n=638
+ \\ 
+ \Rightarrow \frac{638}{2} 
+ \\ 
+ \Rightarrow n=319
+ \\[3mm] 
+f(n), n=319
+ \\ 
+ \Rightarrow 3(319) + 1
+ \\ 
+ \Rightarrow n=958
+ \\[3mm] 
+f(n), n=958
+ \\ 
+ \Rightarrow \frac{958}{2} 
+ \\ 
+ \Rightarrow n=479
+ \\[3mm] 
+f(n), n=479
+ \\ 
+ \Rightarrow 3(479) + 1
+ \\ 
+ \Rightarrow n=1438
+ \\[3mm] 
+f(n), n=1438
+ \\ 
+ \Rightarrow \frac{1438}{2} 
+ \\ 
+ \Rightarrow n=719
+ \\[3mm] 
+f(n), n=719
+ \\ 
+ \Rightarrow 3(719) + 1
+ \\ 
+ \Rightarrow n=2158
+ \\[3mm] 
+f(n), n=2158
+ \\ 
+ \Rightarrow \frac{2158}{2} 
+ \\ 
+ \Rightarrow n=1079
+ \\[3mm] 
+f(n), n=1079
+ \\ 
+ \Rightarrow 3(1079) + 1
+ \\ 
+ \Rightarrow n=3238
+ \\[3mm] 
+f(n), n=3238
+ \\ 
+ \Rightarrow \frac{3238}{2} 
+ \\ 
+ \Rightarrow n=1619
+ \\[3mm] 
+f(n), n=1619
+ \\ 
+ \Rightarrow 3(1619) + 1
+ \\ 
+ \Rightarrow n=4858
+ \\[3mm] 
+f(n), n=4858
+ \\ 
+ \Rightarrow \frac{4858}{2} 
+ \\ 
+ \Rightarrow n=2429
+ \\[3mm] 
+f(n), n=2429
+ \\ 
+ \Rightarrow 3(2429) + 1
+ \\ 
+ \Rightarrow n=7288
+ \\[3mm] 
+f(n), n=7288
+ \\ 
+ \Rightarrow \frac{7288}{2} 
+ \\ 
+ \Rightarrow n=3644
+ \\[3mm] 
+f(n), n=3644
+ \\ 
+ \Rightarrow \frac{3644}{2} 
+ \\ 
+ \Rightarrow n=1822
+ \\[3mm] 
+f(n), n=1822
+ \\ 
+ \Rightarrow \frac{1822}{2} 
+ \\ 
+ \Rightarrow n=911
+ \\[3mm] 
+f(n), n=911
+ \\ 
+ \Rightarrow 3(911) + 1
+ \\ 
+ \Rightarrow n=2734
+ \\[3mm] 
+f(n), n=2734
+ \\ 
+ \Rightarrow \frac{2734}{2} 
+ \\ 
+ \Rightarrow n=1367
+ \\[3mm] 
+f(n), n=1367
+ \\ 
+ \Rightarrow 3(1367) + 1
+ \\ 
+ \Rightarrow n=4102
+ \\[3mm] 
+f(n), n=4102
+ \\ 
+ \Rightarrow \frac{4102}{2} 
+ \\ 
+ \Rightarrow n=2051
+ \\[3mm] 
+f(n), n=2051
+ \\ 
+ \Rightarrow 3(2051) + 1
+ \\ 
+ \Rightarrow n=6154
+ \\[3mm] 
+f(n), n=6154
+ \\ 
+ \Rightarrow \frac{6154}{2} 
+ \\ 
+ \Rightarrow n=3077
+ \\[3mm] 
+f(n), n=3077
+ \\ 
+ \Rightarrow 3(3077) + 1
+ \\ 
+ \Rightarrow n=9232
+ \\[3mm] 
+f(n), n=9232
+ \\ 
+ \Rightarrow \frac{9232}{2} 
+ \\ 
+ \Rightarrow n=4616
+ \\[3mm] 
+f(n), n=4616
+ \\ 
+ \Rightarrow \frac{4616}{2} 
+ \\ 
+ \Rightarrow n=2308
+ \\[3mm] 
+f(n), n=2308
+ \\ 
+ \Rightarrow \frac{2308}{2} 
+ \\ 
+ \Rightarrow n=1154
+ \\[3mm] 
+f(n), n=1154
+ \\ 
+ \Rightarrow \frac{1154}{2} 
+ \\ 
+ \Rightarrow n=577
+ \\[3mm] 
+f(n), n=577
+ \\ 
+ \Rightarrow 3(577) + 1
+ \\ 
+ \Rightarrow n=1732
+ \\[3mm] 
+f(n), n=1732
+ \\ 
+ \Rightarrow \frac{1732}{2} 
+ \\ 
+ \Rightarrow n=866
+ \\[3mm] 
+f(n), n=866
+ \\ 
+ \Rightarrow \frac{866}{2} 
+ \\ 
+ \Rightarrow n=433
+ \\[3mm] 
+f(n), n=433
+ \\ 
+ \Rightarrow 3(433) + 1
+ \\ 
+ \Rightarrow n=1300
+ \\[3mm] 
+f(n), n=1300
+ \\ 
+ \Rightarrow \frac{1300}{2} 
+ \\ 
+ \Rightarrow n=650
+ \\[3mm] 
+f(n), n=650
+ \\ 
+ \Rightarrow \frac{650}{2} 
+ \\ 
+ \Rightarrow n=325
+ \\[3mm] 
+f(n), n=325
+ \\ 
+ \Rightarrow 3(325) + 1
+ \\ 
+ \Rightarrow n=976
+ \\[3mm] 
+f(n), n=976
+ \\ 
+ \Rightarrow \frac{976}{2} 
+ \\ 
+ \Rightarrow n=488
+ \\[3mm] 
+f(n), n=488
+ \\ 
+ \Rightarrow \frac{488}{2} 
+ \\ 
+ \Rightarrow n=244
+ \\[3mm] 
+f(n), n=244
+ \\ 
+ \Rightarrow \frac{244}{2} 
+ \\ 
+ \Rightarrow n=122
+ \\[3mm] 
+f(n), n=122
+ \\ 
+ \Rightarrow \frac{122}{2} 
+ \\ 
+ \Rightarrow n=61
+ \\[3mm] 
+f(n), n=61
+ \\ 
+ \Rightarrow 3(61) + 1
+ \\ 
+ \Rightarrow n=184
+ \\[3mm] 
+f(n), n=184
+ \\ 
+ \Rightarrow \frac{184}{2} 
+ \\ 
+ \Rightarrow n=92
+ \\[3mm] 
+f(n), n=92
+ \\ 
+ \Rightarrow \frac{92}{2} 
+ \\ 
+ \Rightarrow n=46
+ \\[3mm] 
+f(n), n=46
+ \\ 
+ \Rightarrow \frac{46}{2} 
+ \\ 
+ \Rightarrow n=23
+ \\[3mm] 
+f(n), n=23
+ \\ 
+ \Rightarrow 3(23) + 1
+ \\ 
+ \Rightarrow n=70
+ \\[3mm] 
+f(n), n=70
+ \\ 
+ \Rightarrow \frac{70}{2} 
+ \\ 
+ \Rightarrow n=35
+ \\[3mm] 
+f(n), n=35
+ \\ 
+ \Rightarrow 3(35) + 1
+ \\ 
+ \Rightarrow n=106
+ \\[3mm] 
+f(n), n=106
+ \\ 
+ \Rightarrow \frac{106}{2} 
+ \\ 
+ \Rightarrow n=53
+ \\[3mm] 
+f(n), n=53
+ \\ 
+ \Rightarrow 3(53) + 1
+ \\ 
+ \Rightarrow n=160
+ \\[3mm] 
+f(n), n=160
+ \\ 
+ \Rightarrow \frac{160}{2} 
+ \\ 
+ \Rightarrow n=80
+ \\[3mm] 
+f(n), n=80
+ \\ 
+ \Rightarrow \frac{80}{2} 
+ \\ 
+ \Rightarrow n=40
+ \\[3mm] 
+f(n), n=40
+ \\ 
+ \Rightarrow \frac{40}{2} 
+ \\ 
+ \Rightarrow n=20
+ \\[3mm] 
+f(n), n=20
+ \\ 
+ \Rightarrow \frac{20}{2} 
+ \\ 
+ \Rightarrow n=10
+ \\[3mm] 
+f(n), n=10
+ \\ 
+ \Rightarrow \frac{10}{2} 
+ \\ 
+ \Rightarrow n=5
+ \\[3mm] 
+f(n), n=5
+ \\ 
+ \Rightarrow 3(5) + 1
+ \\ 
+ \Rightarrow n=16
+ \\[3mm] 
+f(n), n=16
+ \\ 
+ \Rightarrow \frac{16}{2} 
+ \\ 
+ \Rightarrow n=8
+ \\[3mm] 
+f(n), n=8
+ \\ 
+ \Rightarrow \frac{8}{2} 
+ \\ 
+ \Rightarrow n=4
+ \\[3mm] 
+f(n), n=4
+ \\ 
+ \Rightarrow \frac{4}{2} 
+ \\ 
+ \Rightarrow n=2
+ \\[3mm] 
+f(n), n=2
+ \\ 
+ \Rightarrow \frac{2}{2} 
+ \\ 
+ \Rightarrow n=1
+ \\[3mm] 
+
+    \section{Credits and References Shit}
+    %Maybe add link to gitrepo and other shit, idk
+    This is created using Collatzer (https://github.com/Z1aaan/Collatzer).
+    Created By: Z1aaan
+    
+    README:
+    A program created to visualize and simulate a user-given value for \textit{N} 
+    and see what happens when it is put under the Collatz function.
+    \end{document}
