@@ -1,0 +1,11 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "PATH_latex_format.xdv" "PATH_latex_format.pdf" "PATH_latex_format" 0
+  "PATH_latex_format.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "PATH_latex_format.pdf"
+["xelatex"] 0 "c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex" "PATH_latex_format.xdv" "PATH_latex_format" 0
+  "PATH_latex_format.aux" 1635692768 34 3985256e7290058c681f74d7a3565a19 ""
+  "c:/Users/zhean/Documents/-A-ZHEAN/Code/Collatz/Collatzer/PATH_latex_format.tex" 0 -1 0 ""
+  (generated)
+  "PATH_latex_format.xdv"
+  "PATH_latex_format.log"
