@@ -6,6 +6,9 @@ def collatz_latex(collatz_N):
     # remember to duplicate \ because python needs two \ to print it
     latex_path = str()
     # start the latex docuement
+
+    # separate the begin variables to append because we have to insert the user unput
+
     latexBegin = """
     \\documentclass{article}
     \\usepackage[utf8]{inputenc}
