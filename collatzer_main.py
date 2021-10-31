@@ -68,8 +68,9 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
             break
 
 
-if __name__ == "__main__":
+def collatzer_main():
     # create a variable to do the function on.
+    global sleepVar
     sleepVar = 1
     print("Welcome to Collatzer\n")
     t.sleep(sleepVar)
@@ -81,3 +82,17 @@ if __name__ == "__main__":
     t.sleep(sleepVar * 2)
     collatzPath(NUM, PATH)
     collatz_latex_start(NUM)
+
+
+def collatzer_main_import(importedNUM):
+    sleepVar = 1
+    PATH = str()
+    collatz(importedNUM)
+    print("Hold On...\n")
+    t.sleep(sleepVar * 2)
+    collatzPath(importedNUM, PATH)
+    collatz_latex_start(importedNUM)
+
+
+if __name__ == "__main__":
+    collatzer_main()
