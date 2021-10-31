@@ -2,22 +2,26 @@ from collatzer_main import *
 import time as t
 
 
-def collatz_latex(collatz_N):
+def collatz_latex(collatzN):
     # remember to duplicate \ because python needs two \ to print it
     latex_path = str()
+
     # start the latex docuement
 
     # separate the begin variables to append because we have to insert the user unput
 
-    latexBegin = """
+    latexBegin_1 = """
     \\documentclass{article}
     \\usepackage[utf8]{inputenc}
     \\usepackage{amsmath}
-    \\begin{document}
+    \\begin{document}"""
 
-    %Title
-    \\section{Collatz Sequence for \(n=[INPUT]\) }
+    latexBegin_input = "%Title \\section{Collatz Sequence for \(n=" + \
+        collatzN + "\) }"
 
+    latexBegin_2 = latexBegin_input
+
+    latexBegin_3 = """
     %Collatz Function
     \\[
         f(n)=
@@ -27,7 +31,8 @@ def collatz_latex(collatz_N):
         3n+1, &n \mod 2=1
         \end{cases} \\\\
     \\]"""
-    latex_path += latexBegin
+
+    latex_path += latexBegin_1 + latexBegin_2 + latexBegin_3
 
     # add the output of collatzer_main to the middle of the latex document
 
@@ -38,7 +43,8 @@ def collatz_latex(collatz_N):
 
     \\end{document}"""
 
-    latex_path += latexBegin
+    latex_path += latexEnd
+
     print(latex_path)
 
 
