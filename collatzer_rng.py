@@ -5,17 +5,22 @@ from collatzer_main import *
 
 
 def minMaxRNG():
+    global finalRandomNumber
+    finalRandomNumber = int()
     userMin = int(input("""
 Min
 < """))
     userMax = int(input("""\n
 Max
 < """))
-    randomNumber = random.randint(userMin, userMax)
-    print("\nGenerated Number: ", randomNumber)
+    finalRandomNumber = random.randint(userMin, userMax)
+    print("\nGenerated Number: ", finalRandomNumber)
 
 
 def piValRNG():
+    global finalRandomNumber
+    finalRandomNumber = int()
+
     # 3.1415926535 8979323846
     userMin = int(input("""
 Min
@@ -48,7 +53,7 @@ Max
 
 
 def importCollatzer():
-    pass
+    collatzer_main_import(finalRandomNumber)
 
 
 if __name__ == "__main__":
@@ -70,3 +75,12 @@ Created for Collatzer.
             print("\nHold On...")
             t.sleep(3)
             sys.exit()
+
+        # ask user if they want to import it to collatzer_main
+        importChoice = str(input("""
+Do you want to import generated number to Collatzer? [Y/n]
+< """))
+        importChoice = importChoice.upper()
+        if importChoice == "Y":
+            print()
+            importCollatzer()
