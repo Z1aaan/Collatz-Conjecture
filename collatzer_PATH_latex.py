@@ -1,4 +1,5 @@
 from collatzer_main import *
+from collatzer_filesaver import *
 import time as t
 import math
 
@@ -133,23 +134,26 @@ def collatz_latex(collatzN):
 
     print(latex_path)
 
+    latexSaveFile(latex_path)
 
-if __name__ == "__main__":
+
+def collatz_latex_start(mainImport):
     choice = str(input("""
-    Converting the equation in LaTeX, 
-    may take a long time (depending on how long the equation is),
-    are you sure? [Y/n]
-    < """))
+Converting the equation in LaTeX, 
+may take a long time (depending on how long the equation is),
+are you sure? [Y/n]
+< """))
     choice = choice.upper()
     if choice == 'Y':
+        print()
         print("""
-        \nPATH_latex: Working...
-        Converting to LaTeX... 
-        Hold On....""")
+PATH_latex: Working...
+Converting to LaTeX... 
+Hold On....""")
         for i in range(10):
             # add this so that there's like a 'loading sequence' before the latex output is displayed
             t.sleep(0.1)
             print()
-        collatz_latex(5)
+        collatz_latex(mainImport)
     else:
         print("\nPATH_latex: leaving...")
