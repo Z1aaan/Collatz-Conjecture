@@ -135,9 +135,20 @@ def collatz_latex(collatzN):
 
 
 if __name__ == "__main__":
-    print("""Put messages here later""")
-    for i in range(10):
-        # add this so that there's like a 'loading sequence' before the latex output is displayed
-        t.sleep(0.1)
-        print()
-    collatz_latex(5)
+    choice = str(input("""
+    Converting the equation in LaTeX, 
+    may take a long time (depending on how long the equation is),
+    are you sure? [Y/n]"""))
+    choice = choice.upper()
+    if choice == 'Y':
+        print("""
+        PATH_latex: Working...
+        Converting to LaTeX... 
+        Hold On....""")
+        for i in range(10):
+            # add this so that there's like a 'loading sequence' before the latex output is displayed
+            t.sleep(0.1)
+            print()
+        collatz_latex(5)
+    else:
+        print("PATH_latex: leaving...")
