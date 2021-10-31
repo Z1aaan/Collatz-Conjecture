@@ -33,7 +33,6 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
     """
 
     NUM_str = str(NUM)
-    print(NUM_str)
     collatz_function = "f(" + NUM_str + ")"
     PATH += "Path for " + collatz_function + "\n"
 
@@ -72,8 +71,13 @@ def collatzPath(NUM, PATH):  # creates the path for the user to view
 if __name__ == "__main__":
     # create a variable to do the function on.
     sleepVar = 1
+    print("Welcome to Collatzer\n")
+    t.sleep(sleepVar)
     NUM = int(input("Number to do function on: "))
+    print()
     PATH = str()
     collatz(NUM)
-    t.sleep(sleepVar)
+    print("Hold On...\n")
+    t.sleep(sleepVar * 2)
     collatzPath(NUM, PATH)
+    collatz_latex_start(NUM)
