@@ -23,7 +23,7 @@ def optionsChecker():
         if lineContent_L1 == "0" and lineContent_L2 == "0":  # file location not saved
             print("""
 Folder location for latex_output not saved...
-options.txt 
+options.txt
 {
     dir_save = 0
     dir = 0
@@ -51,6 +51,25 @@ def saveFilePath():  # function that saves the latex_outputs path to options.txt
         NewOptionsFile.write(FilePathInOptions)
 
 
+def getFolderLocation():
+    global FOLDERLOCATION
+    FOLDERLOCATION = str()
+    with open("collatzer_options.txt", "r") as optionsFile:
+        for lineNumber, optionsFileLine in enumerate(optionsFile):
+            if lineNumber == 1:  # first line in the options file
+                lineContent_L1 = optionsFileLine.replace("dir", "")
+                lineContent_L1 = lineContent_L1.replace("=", "")
+                lineContent_L1 = lineContent_L1.strip()
+
+    # Backslash duplicator because python doesn't recognize a single '\'
+    for character in lineContent_L1:
+        if character == "\\":
+            FOLDERLOCATION += character + character
+        else:
+            FOLDERLOCATION += character
+    print(FOLDERLOCATION)
+
+
 def latexSaveFile(fileContent):
     fileFormat = str(input("""
 File format of file?
@@ -65,13 +84,17 @@ File format of file?
     fileName = str(input("""
 File Name?
 < """))
+
+    optionsChecker()
+    saveFilePath()
+
     fullFileName = fileName + fileFormat
-    with open(fullFileName, "w") as f:
+    completeFileName = os.path.join(FOLDERLOCATION, fullFileName)
+
+    with open(completeFileName, "w") as f:
         f.write(fileContent)
 
     for i in range(10):
         t.sleep(0.35)
         print("\nLoading...\n")
     print("Done!")
-    optionsChecker()
-    saveFilePath()

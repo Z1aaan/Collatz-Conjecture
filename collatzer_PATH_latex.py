@@ -162,4 +162,3 @@ Hold On....""")
         collatz_latex(mainImport)
     else:
         print("\nPATH_latex: leaving...")
-    collatzer_main_menu()
