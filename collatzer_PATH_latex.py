@@ -150,7 +150,6 @@ are you sure? [Y/n]
 < """))
     choice = choice.upper()
     if choice == 'Y':
-        print()
         print("""
 PATH_latex: Working...
 Converting to LaTeX... 
