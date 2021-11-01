@@ -72,7 +72,6 @@ def collatzer_main():
     # create a variable to do the function on.
     global sleepVar
     sleepVar = 1
-    print("Welcome to Collatzer\n")
     t.sleep(sleepVar)
     NUM = int(input("Number to do function on: "))
     print()
@@ -94,5 +93,26 @@ def collatzer_main_import(importedNUM):
     collatz_latex_start(importedNUM)
 
 
-if __name__ == "__main__":
+def collatzer_main_menu():
+    print("""
+Welcome to Collatzer
+Created by: Z1aaan
+Website: https://github.com/Z1aaan/Collatzer\n""")
     collatzer_main()
+    while True:
+        menu_choice = str(input("""
+Do you want to use Collatzer again? [Y/n]
+< """))
+        menu_choice = menu_choice.upper()
+        if menu_choice == 'Y':
+            print()
+            collatzer_main()
+        else:
+            print("\nGoodbye!")
+            print("Closing...")
+            t.sleep(5)
+            break
+
+
+if __name__ == "__main__":
+    collatzer_main_menu()
