@@ -9,7 +9,11 @@
 ## **How To**
 #### Simply execute the `collatzer_main.py`
 #### Then, type what you want for the value of *N*
-#### If you want to export it as a LaTeX file, then input `Y`, when the program asks you if you want to export it. 
+#### If you want to export it as a LaTeX (or .txt) file, then input `Y`, when the program asks you if you want to export it. 
+#### You can also execute the `collatzer_rng.py` if you want a randomly generated input (with the given) `min` and `max`, then you can chooce to import the randomly generated number to `collatzer_main.py` in `collatzer_rng.py` itself
+### **First Open:**
+#### On your first open, the program will ask you what the folder path is for latex_outputs. Simply copy the path for this folder then input in the program.
+#### *Note:* No need to duplicate the `\`, the program will automatically duplicate it for you.
 
 ## **Requirements**
 #### - [Python](https://www.python.org/)
@@ -17,6 +21,9 @@
 #### -- Through LaTeX distributions like: MikTex, TeX Live, etc. (I use [MikTex](https://miktex.org/))
 #### -- Or through online LaTeX editors like [overleaf](https://www.overleaf.com/)
 #### - Perl *(I think)* (I use [Strawberry Pearl](https://strawberryperl.com/)) 
+
+## **Common Errors**
+#### 1. When inputting the file name, there is no need to input the file type (the program will automatically append it for you).
 
 ## Future
 #### Maybe I'll add a way for you to also export and embed it into HTML format, using HTML and KaTeX.
