@@ -1,0 +1,57 @@
+
+    \documentclass{article}
+    \usepackage[utf8]{inputenc}
+    \usepackage{amsmath}
+    \begin{document}
+ %Title 
+ \section{Collatz Sequence for \(n=5\) }
+    %Collatz Function
+    \[
+        f(n)=
+        \begin{cases}
+        \frac{n}{2}, & n \mod 2=0
+        \\
+        3n+1, &n \mod 2=1
+        \end{cases} \\
+    \]
+    % Path for given N
+    \(\textbf{Path for f(5)}\\[3mm]f(n), n=5
+ \\ 
+ \Rightarrow 3(5) + 1
+ \\ 
+ \Rightarrow n=16
+ \\[3mm] 
+f(n), n=16
+ \\ 
+ \Rightarrow \frac{16}{2} 
+ \\ 
+ \Rightarrow n=8
+ \\[3mm] 
+f(n), n=8
+ \\ 
+ \Rightarrow \frac{8}{2} 
+ \\ 
+ \Rightarrow n=4
+ \\[3mm] 
+f(n), n=4
+ \\ 
+ \Rightarrow \frac{4}{2} 
+ \\ 
+ \Rightarrow n=2
+ \\[3mm] 
+f(n), n=2
+ \\ 
+ \Rightarrow \frac{2}{2} 
+ \\ 
+ \Rightarrow n=1
+ \\[3mm] 
+
+    \section{Credits}
+    %Maybe add link to gitrepo and other shit, idk
+    This is created using Collatzer (https://github.com/Z1aaan/Collatzer).
+    Created By: Z1aaan
+    
+    README:
+    A program created to visualize and simulate a user-given value for \textit{N} 
+    and see what happens when it is put under the Collatz function.
+    \end{document}

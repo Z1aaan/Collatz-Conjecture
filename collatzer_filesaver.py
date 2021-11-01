@@ -1,4 +1,3 @@
-from _typeshed import FileDescriptorLike
 import time as t
 import os
 import os.path
@@ -6,6 +5,8 @@ from collatzer_main import *
 
 
 def optionsChecker():
+    global fileDirectoryPath
+    fileDirectoryPath = str()
     with open("options.txt", "r") as optionsFile:
         for lineNumber, optionsFileLine in enumerate(optionsFile):
             if lineNumber == 0:  # first line in the options file
@@ -20,7 +21,12 @@ def optionsChecker():
                 lineContent_L2 = lineContent_L2.strip()
 
         if lineContent_L1 == "0" and lineContent_L2 == "0":  # file location not saved
-            global fileDirectoryPath
+            print("""
+Folder location for latex_output not saved...
+options.txt{
+    dir_save = 0
+    dir = 0
+saveFilePath function loading...\n""")
             fileDirectoryPath = str(input("latex_outputs file path \n< "))
             saveFilePath()
         else:  # file location is saved
@@ -29,7 +35,6 @@ def optionsChecker():
             correctChecker = str(input("Is this correct? [Y/n]\n< "))
             correctChecker = correctChecker.upper()
             if correctChecker == 'N':  # execute save function
-                global fileDirectoryPath
                 fileDirectoryPath = str(input("latex_outputs file path \n< "))
                 saveFilePath()
 
@@ -63,3 +68,5 @@ File Name?
         t.sleep(0.35)
         print("\nLoading...\n")
     print("Done!")
+    optionsChecker()
+    saveFilePath()
