@@ -125,7 +125,7 @@ def collatz_latex(collatzN):
 
     # end to latex docuement
     latexEnd = """
-    \\section{Credits and References Shit}
+    \\section{Credits}
     %Maybe add link to gitrepo and other shit, idk
     This is created using Collatzer (https://github.com/Z1aaan/Collatzer).
     Created By: Z1aaan
@@ -162,3 +162,4 @@ Hold On....""")
         collatz_latex(mainImport)
     else:
         print("\nPATH_latex: leaving...")
+    collatzer_main_menu()
