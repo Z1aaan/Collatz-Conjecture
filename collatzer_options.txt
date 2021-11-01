@@ -1,2 +1,2 @@
-dir_save = 0
-dir = 0
+dir_save = 1
+dir = C:\Users\zhean\Documents\-A-ZHEAN\Code\Collatz\Collatzer\latex_outputs

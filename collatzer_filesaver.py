@@ -87,6 +87,7 @@ File Name?
 
     optionsChecker()
     saveFilePath()
+    getFolderLocation()
 
     fullFileName = fileName + fileFormat
     completeFileName = os.path.join(FOLDERLOCATION, fullFileName)
