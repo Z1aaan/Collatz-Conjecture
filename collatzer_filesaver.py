@@ -1,6 +1,6 @@
 import time as t
 import os
-import os.path
+import os.path as path
 from collatzer_main import *
 
 
@@ -33,9 +33,10 @@ saveFilePath function loading...\n""")
             optionsFile.close()
             saveFilePath()
         else:  # file location is saved
-            print("\nFile location saved (latex_outputs folder path in options.txt")
+            print("\nFile location saved (latex_outputs folder path in options.txt)")
             print("The folder path is saved as:", lineContent_L2)
             correctChecker = str(input("Is this correct? [Y/n]\n< "))
+            print()
             correctChecker = correctChecker.upper()
             if correctChecker == 'N':  # execute save function
                 fileDirectoryPath = str(input("latex_outputs file path \n< "))
@@ -89,8 +90,10 @@ File Name?
     saveFilePath()
     getFolderLocation()
 
+    print(FOLDERLOCATION)
+
     fullFileName = fileName + fileFormat
-    completeFileName = os.path.join(FOLDERLOCATION, fullFileName)
+    completeFileName = path.join(FOLDERLOCATION, fullFileName)
 
     with open(completeFileName, "w") as f:
         f.write(fileContent)

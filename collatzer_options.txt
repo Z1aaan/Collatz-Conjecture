@@ -1,2 +1,2 @@
-dir_save = 1
-dir = 
+dir_save = 0
+dir = 0
