@@ -7,7 +7,7 @@ from collatzer_main import *
 def optionsChecker():
     global fileDirectoryPath
     fileDirectoryPath = str()
-    with open("options.txt", "r") as optionsFile:
+    with open("collatzer_options.txt", "r") as optionsFile:
         for lineNumber, optionsFileLine in enumerate(optionsFile):
             if lineNumber == 0:  # first line in the options file
                 lineContent_L1 = optionsFileLine.replace("dir_save", "")
@@ -23,11 +23,14 @@ def optionsChecker():
         if lineContent_L1 == "0" and lineContent_L2 == "0":  # file location not saved
             print("""
 Folder location for latex_output not saved...
-options.txt{
+options.txt 
+{
     dir_save = 0
     dir = 0
+}
 saveFilePath function loading...\n""")
             fileDirectoryPath = str(input("latex_outputs file path \n< "))
+            optionsFile.close()
             saveFilePath()
         else:  # file location is saved
             print("\nFile location saved (latex_outputs folder path in options.txt")
@@ -36,14 +39,16 @@ saveFilePath function loading...\n""")
             correctChecker = correctChecker.upper()
             if correctChecker == 'N':  # execute save function
                 fileDirectoryPath = str(input("latex_outputs file path \n< "))
+                optionsFile.close()
                 saveFilePath()
 
 
 def saveFilePath():  # function that saves the latex_outputs path to options.txt (if it is not saved yet)
-    os.remove("options.txt")
-    with open("options.txt", "w") as NewOptionsFile:
+    os.remove("collatzer_options.txt")
+    with open("collatzer_options.txt", "w") as NewOptionsFile:
         NewOptionsFile.write("dir_save = 1\n")
         FilePathInOptions = "dir = " + fileDirectoryPath
+        NewOptionsFile.write(FilePathInOptions)
 
 
 def latexSaveFile(fileContent):
