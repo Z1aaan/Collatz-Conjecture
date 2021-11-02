@@ -28,3 +28,6 @@
 ## Future
 #### Maybe I'll add a way for you to also export and embed it into HTML format, using HTML and KaTeX.
 #### Maybe I'll add a shorter more compressed output for people who don't want to see the whole `PATH`.
+
+## Other Notes
+#### BTW, It is **safe** to delete the `sample_output.tex` and the `other_samples` folder if you want to.
