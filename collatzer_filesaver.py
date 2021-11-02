@@ -8,7 +8,36 @@ from collatzer_main import *
 def optionsChecker():
     global fileDirectoryPath
     fileDirectoryPath = str()
-    with open("config.json")
+
+    with open("config.json", "r") as configFile:
+        configs = json.load(configFile)
+
+        dirSaved = configs["dir_save"]
+        dirSaveLocation = configs["dir"]
+
+        if dirSaveLocation == "0" and dirSaved == "0":  # file location not saved
+            print("""
+Folder location for latex_output not saved...
+options.txt
+{
+  "dir_save": "0",
+  "dir": "0"
+}
+saveFilePath function loading...\n""")
+            fileDirectoryPath = str(input("latex_outputs file path \n< "))
+            configFile.close()
+            saveFilePath()
+
+        else:  # file location is saved
+            print("\nFile location saved (latex_outputs folder path in options.txt)")
+            print("The folder path is saved as:", dirSaveLocation)
+            correctChecker = str(input("Is this correct? [Y/n]\n< "))
+            print()
+            correctChecker = correctChecker.upper()
+            if correctChecker == 'N':  # execute save function
+                fileDirectoryPath = str(input("latex_outputs file path \n< "))
+                configFile.close()
+                saveFilePath()
 
 
 def saveFilePath():  # function that saves the latex_outputs path to options.txt (if it is not saved yet)
