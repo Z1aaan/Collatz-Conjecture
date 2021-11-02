@@ -51,15 +51,11 @@ def saveFilePath():  # function that saves the latex_outputs path to options.txt
 def getFolderLocation():
     global FOLDERLOCATION
     FOLDERLOCATION = str()
-    with open("collatzer_options.txt", "r") as optionsFile:
-        for lineNumber, optionsFileLine in enumerate(optionsFile):
-            if lineNumber == 1:  # first line in the options file
-                lineContent_L1 = optionsFileLine.replace("dir", "")
-                lineContent_L1 = lineContent_L1.replace("=", "")
-                lineContent_L1 = lineContent_L1.strip()
+    with open("config.json", "r") as configFile:
+        content = configs["dir"]
 
     # Backslash duplicator because python doesn't recognize a single '\'
-    for character in lineContent_L1:
+    for character in content:
         if character == "\\":
             FOLDERLOCATION += character + character
         else:
