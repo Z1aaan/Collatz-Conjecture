@@ -10,6 +10,7 @@ def optionsChecker():
     fileDirectoryPath = str()
 
     with open("config.json", "r") as configFile:
+        global configs
         configs = json.load(configFile)
 
         dirSaved = configs["dir_save"]
@@ -41,11 +42,10 @@ saveFilePath function loading...\n""")
 
 
 def saveFilePath():  # function that saves the latex_outputs path to options.txt (if it is not saved yet)
-    os.remove("collatzer_options.txt")
-    with open("collatzer_options.txt", "w") as NewOptionsFile:
-        NewOptionsFile.write("dir_save = 1\n")
-        FilePathInOptions = "dir = " + fileDirectoryPath
-        NewOptionsFile.write(FilePathInOptions)
+    configs["dir"] = fileDirectoryPath
+    configs["dir_save"] = "1"
+    with open("config.json", "w") as configFile:
+        json.dump(configs, configFile)
 
 
 def getFolderLocation():
