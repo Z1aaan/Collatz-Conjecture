@@ -60,7 +60,6 @@ def getFolderLocation():
             FOLDERLOCATION += character + character
         else:
             FOLDERLOCATION += character
-    print(FOLDERLOCATION)
 
 
 def latexSaveFile(fileContent):
@@ -77,6 +76,8 @@ File format of file?
     fileName = str(input("""
 File Name?
 < """))
+
+    t.sleep(2)
 
     optionsChecker()
     saveFilePath()
