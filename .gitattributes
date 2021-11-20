@@ -1,4 +1,7 @@
 # Linguist overrides
-*.tex linguist-detectable=true
-
+*.json linguist-detectable=true
+sample(10).tex linguist-detectable=false
+sample(15).tex linguist-detectable=false
+sample(25).tex linguist-detectable=false
+sample(30).tex linguist-detectable=false
 
