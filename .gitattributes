@@ -1,8 +1,9 @@
 # Linguist overrides
 *.json linguist-detectable=true
 *.md linguist-detectable=true
+README.md linguist-detectable=true
+LICENSE.nd linguist-detectable=true
 sample(10).tex linguist-detectable=false
 sample(15).tex linguist-detectable=false
 sample(25).tex linguist-detectable=false
 sample(30).tex linguist-detectable=false
-
