@@ -1,10 +1,10 @@
 # Collatzer
 ### **A program created to visualize and simulate a user-given value for *N* and see what happens when it is put under the Collatz function.**
 ## **Basic Info**
-### Created by: Zhean Ganituen (Z1aaan)
+### Created by: Zhean Ganituen (zrygan)
 ### Created on: October 29, 2021
 ### Last Updated: November 2, 2021
-### Github Repo: https://github.com/Z1aaan/Collatzer
+### Github Repo: https://github.com/zrygan/Collatzer
 
 ## **How To**
 #### Simply execute the `collatzer_main.py`
